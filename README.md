@@ -24,3 +24,61 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 3. Fix the lab before you blame the player.
 
 *New labs land here as soon as they survive first contact — watch this space.*
+
+---
+
+## 中文
+
+黑盒渗透靶场，一个仓库讲透一条漏洞利用链——每个靶场都是**自研建造、由自主 AI 渗透 agent 实战打穿后出厂，并附完整题解**（挑战简报 → 解题全过程 → 难度校准，英日中三语）。
+
+### *2Shell 系列
+
+| 靶场 | 漏洞利用链 | 难度（实测校准） | AI agent 通关记录 |
+|---|---|---|---|
+| [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli 崩溃链（CVE-2026-111497），崩溃门控双 flag | 3.5/5 | 全链通关，工厂实测 |
+| [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell 时代堆内存泄露链（CVE-2026-109618/109619）+ SUID 符号链接提权 | 标称 4/5 · 实弹 3.5/5 | 双 flag，最快约 15 分钟 |
+
+### 每个仓库标配
+
+- **CHALLENGE.md** — 真黑盒简报，零剧透
+- **SOLUTION.md** — 完整击杀链：每条命令、偏移量、真实 flag 值（不给 flag 的题解等于没写结局）
+- **DIFFICULTY.md** — 标称难度 vs 实弹校准，附定级依据
+- **RESET.sh** — 一条命令恢复出厂状态
+- 每个靶场发布前都先被 AI 渗透 agent 打了一遍；agent 打不穿（或用我们没设计到的方式打穿了），改的是靶场，不是故事。
+
+### 发布三准则
+
+1. 只发从零自建的靶场——不收上游 CTF 镜像换皮。
+2. 每个靶场出厂前必须被自主 agent 端到端打穿。
+3. 先修靶场，再怪玩家。
+
+*新靶场经受住首波打击后即上线——敬请期待。*
+
+---
+
+## 日本語
+
+ブラックボックス型pentestラボ。1リポジトリ＝1本のエクスプロイトストーリー。すべてのラボは**自作構築・自律AI pentestエージェントによる実戦撃破検証済み・完全書き下ろし解答付き**（チャレンジ概要 → 攻略フルウォークスルー → 難易度キャリブレーション、日英中3言語対応）。
+
+### *2Shell シリーズ
+
+| ラボ | エクスプロイト概要 | 難易度（実測補正） | AIエージェント攻略記録 |
+|---|---|---|---|
+| [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli クラッシュチェーン（CVE-2026-111497）、クラッシュ連動ダブルフラグ | 3.5/5 | フルチェーン攻略、工場計測 |
+| [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell時代のヒープ情報漏洩チェーン（CVE-2026-109618/109619）＋SUIDシンボリックリンク権限昇格 | 公称4/5・実戦3.5/5 | フラグ両方、最速約15分 |
+
+### 全リポジトリ共通の定番構成
+
+- **CHALLENGE.md** — 真のブラックボックス概要、ネタバレゼロ
+- **SOLUTION.md** — 完全キルチェーン：全コマンド・オフセット・実際のフラグ値まで（フラグなしの解説は結びのない小説と同じ）
+- **DIFFICULTY.md** — 公称難易度 vs 実戦補正、格付け根拠付き
+- **RESET.sh** — 1コマンドで工場状態に復元
+- 公開前に必ずAI pentestエージェントに殴らせています。エージェントが破れない（または設計外の壊し方をした）場合、直すのはストーリーではなくラボの方。
+
+### 公開三原則
+
+1. 自作構築のラボのみ公開——上流CTFイメージの着せ替えはなし。
+2. 全ラボは自律エージェントによるエンドツーエンド攻略検証を通過してから出荷。
+3. プレーヤーを責める前に、ラボを直せ。
+
+*新ラボはファーストコンタクトを生き延び次第、随時公開——お楽しみに。*
