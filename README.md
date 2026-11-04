@@ -9,6 +9,19 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli crash chain (CVE-2026-111497), crash-gated double flag | 3.5/5 | full chain, factory-measured |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell-era heap-disclosure chain (CVE-2026-109618/109619) + SUID symlink privesc | 4/5 nominal · 3.5/5 live-fire | both flags, ~15 min best run |
 
+## The lab lineup
+
+| Lab | Exploit story | Difficulty (calibrated) | Solved by AI agent |
+|---|---|---|---|
+| [egresslock-lab](https://github.com/tani2shell/egresslock-lab) | Blind SSTI → DNS egress exfiltration → Docker socket escape, three knowledge domains in one chain | 3.5/5 | both flags |
+| [timing-gate-lab](https://github.com/tani2shell/timing-gate-lab) | Timing side-channel with zero error feedback — recover a secret from HTTP codes and milliseconds | 3.5/5 | held across two live runs |
+| [actions-lab](https://github.com/tani2shell/actions-lab) | CI/CD trust chain: script injection in a commit message → shared-runner credential → queue-box master key | 2.5–3/5 | both flags |
+| [verdant-onboarding-lab](https://github.com/tani2shell/verdant-onboarding-lab) | AI-agent flavored portal: guardrail bypass → retrieval dominance → argv smuggling → sudo config-hook privesc | 3.5/5 | both flags |
+| [voltmart-lab](https://github.com/tani2shell/voltmart-lab) | E-commerce + multi-tenant merge-mayhem: mass assignment, command injection, SQLi → SSRF `file://` cross-container reads | 3/5 | both flags |
+| [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | Five flags, five weapon classes: SQLi, reflected XSS, stored XSS + admin bot, command injection, custom-protocol metrics | 2.5/5 | 7/7 flags (joint run) |
+| [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64 kernel privesc as a real VM (UTM/QEMU): one frozen vulnerable kernel, the kernel *is* the target | 3/5 | both flags |
+| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | Suite: five single-issue web-vuln rounds, one app + one port + one flag each — an ammo box for drilling agents | 2/5 (hint-on) | 5/5 first blood |
+
 ## What makes a tani2shell lab different
 
 - **CHALLENGE.md** — true black-box brief, zero spoiler.
@@ -38,6 +51,19 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli 崩溃链（CVE-2026-111497），崩溃门控双 flag | 3.5/5 | 全链通关，工厂实测 |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell 时代堆内存泄露链（CVE-2026-109618/109619）+ SUID 符号链接提权 | 标称 4/5 · 实弹 3.5/5 | 双 flag，最快约 15 分钟 |
 
+### 靶场矩阵
+
+| 靶场 | 漏洞利用链 | 难度（实测校准） | AI agent 通关记录 |
+|---|---|---|---|
+| [egresslock-lab](https://github.com/tani2shell/egresslock-lab) | 盲注 SSTI → DNS 出网外带 → Docker socket 逃逸，一条链吃三个知识域 | 3.5/5 | 双 flag |
+| [timing-gate-lab](https://github.com/tani2shell/timing-gate-lab) | 零报错反馈计时侧信道——只靠 HTTP 状态码和毫秒数恢复密钥 | 3.5/5 | 两轮实弹均破 |
+| [actions-lab](https://github.com/tani2shell/actions-lab) | CI/CD 信任链：commit message 注参 → 共享 runner 凭据 → 队列机主密钥 | 2.5–3/5 | 双 flag |
+| [verdant-onboarding-lab](https://github.com/tani2shell/verdant-onboarding-lab) | AI agent 风入职门户：护栏绕过 → 检索主导 → argv 走私 → sudo 配置钩子提权 | 3.5/5 | 双 flag |
+| [voltmart-lab](https://github.com/tani2shell/voltmart-lab) | 电商+多租户合并灾难：批量赋值、命令注入、SQLi → SSRF `file://` 跨容器读取 | 3/5 | 双 flag |
+| [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | 五旗五武器：SQLi、反射 XSS、存储 XSS+管理员 bot、命令注入、自定义协议 metrics | 2.5/5 | 7/7 旗（联合靶场） |
+| [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64 内核提权真 VM（UTM/QEMU）：一颗冻结的易受攻击内核，内核就是靶 | 3/5 | 双 flag |
+| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | 套件：五个单漏洞 web 回合，一应用一口一旗——agent 刷题弹药箱 | 2/5（带类别提示） | 5/5 首破 |
+
 ### 每个仓库标配
 
 - **CHALLENGE.md** — 真黑盒简报，零剧透
@@ -66,6 +92,19 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 |---|---|---|---|
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli クラッシュチェーン（CVE-2026-111497）、クラッシュ連動ダブルフラグ | 3.5/5 | フルチェーン攻略、工場計測 |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell時代のヒープ情報漏洩チェーン（CVE-2026-109618/109619）＋SUIDシンボリックリンク権限昇格 | 公称4/5・実戦3.5/5 | フラグ両方、最速約15分 |
+
+### ラボラインナップ
+
+| ラボ | エクスプロイト概要 | 難易度（実測補正） | AIエージェント攻略記録 |
+|---|---|---|---|
+| [egresslock-lab](https://github.com/tani2shell/egresslock-lab) | ブラインドSSTI → DNSエグレス持ち出し → Docker socketエスケープ、1本のチェーンに3つの知識ドメイン | 3.5/5 | フラグ両方 |
+| [timing-gate-lab](https://github.com/tani2shell/timing-gate-lab) | エラーフィードバックゼロのタイミング側チャネル——HTTPステータスとミリ秒だけで秘密を復元 | 3.5/5 | 2回の実戦で攻略 |
+| [actions-lab](https://github.com/tani2shell/actions-lab) | CI/CD信頼チェーン：commit message引数注入 → 共有runner認証情報 → キューボックスのマスターキー | 2.5–3/5 | フラグ両方 |
+| [verdant-onboarding-lab](https://github.com/tani2shell/verdant-onboarding-lab) | AIエージェント風オンボーディングポータル：ガードレール迂回 → 検索支配 → argvスマグリング → sudo設定フック権限昇格 | 3.5/5 | フラグ両方 |
+| [voltmart-lab](https://github.com/tani2shell/voltmart-lab) | ECサイト＋マルチテナント統合の悲鳴：mass assignment、コマンドインジェクション、SQLi → SSRF `file://` コンテナ間読み取り | 3/5 | フラグ両方 |
+| [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | 5フラグ5武器：SQLi・リフレクトXSS・ストレージXSS＋管理者ボット・コマンドインジェクション・独自プロトコルmetrics | 2.5/5 | 7/7フラグ（合同演習） |
+| [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64カーネル権限昇格の実VM（UTM/QEMU）：凍結された脆弱カーネル1発、ターゲットはカーネルそのもの | 3/5 | フラグ両方 |
+| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | スイート：単一脆弱性Webラウンド×5、1アプリ1ポート1フラグ——エージェント演習用弾薬箱 | 2/5（クラスヒントあり） | 5/5ファーストブラッド |
 
 ### 全リポジトリ共通の定番構成
 
