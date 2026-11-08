@@ -21,6 +21,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | Five flags, five weapon classes: SQLi, reflected XSS, stored XSS + admin bot, command injection, custom-protocol metrics | 2.5/5 | 7/7 flags (joint run) |
 | [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64 kernel privesc as a real VM (UTM/QEMU): one frozen vulnerable kernel, the kernel *is* the target | 3/5 | both flags |
 | [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | Suite: five single-issue web-vuln rounds, one app + one port + one flag each — an ammo box for drilling agents | 2/5 (hint-on) | 5/5 first blood |
+| [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | Padding oracle on a sealed session cookie → one-byte IV flip to admin → raw-pickle RCE → SUID metachar privesc, all in a single container | 3.5/5 | both flags |
 
 ## What makes a tani2shell lab different
 
@@ -63,6 +64,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | 五旗五武器：SQLi、反射 XSS、存储 XSS+管理员 bot、命令注入、自定义协议 metrics | 2.5/5 | 7/7 旗（联合靶场） |
 | [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64 内核提权真 VM（UTM/QEMU）：一颗冻结的易受攻击内核，内核就是靶 | 3/5 | 双 flag |
 | [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | 套件：五个单漏洞 web 回合，一应用一口一旗——agent 刷题弹药箱 | 2/5（带类别提示） | 5/5 首破 |
+| [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | 填充预言破解密封会话 Cookie → 翻一位 IV 越权 → 裸 pickle RCE → SUID 元字符提权，单容器四段链 | 3.5/5 | 双 flag |
 
 ### 每个仓库标配
 
@@ -105,6 +107,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | 5フラグ5武器：SQLi・リフレクトXSS・ストレージXSS＋管理者ボット・コマンドインジェクション・独自プロトコルmetrics | 2.5/5 | 7/7フラグ（合同演習） |
 | [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64カーネル権限昇格の実VM（UTM/QEMU）：凍結された脆弱カーネル1発、ターゲットはカーネルそのもの | 3/5 | フラグ両方 |
 | [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | スイート：単一脆弱性Webラウンド×5、1アプリ1ポート1フラグ——エージェント演習用弾薬箱 | 2/5（クラスヒントあり） | 5/5ファーストブラッド |
+| [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | 密封セッションCookieのパディングオラクル解読 → IV 1バイト反転で管理者昇格 → 素のpickle RCE → SUIDメタキャラでroot、単一コンテナ4段チェーン | 3.5/5 | フラグ両方 |
 
 ### 全リポジトリ共通の定番構成
 
