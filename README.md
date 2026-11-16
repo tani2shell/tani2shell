@@ -9,7 +9,13 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli crash chain (CVE-2026-111497), crash-gated double flag | 3.5/5 | full chain, factory-measured |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell-era heap-disclosure chain (CVE-2026-109618/109619) + SUID symlink privesc | 4/5 nominal · 3.5/5 live-fire | both flags, ~15 min best run |
 
-## The lab lineup
+## The Attack Drills series
+
+| Repo | What it is | Status |
+|---|---|---|
+| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI-Calibrated Attack Drills Series** — single-issue web drills, one folder per attack surface (sqli / ssti / lfi / deser / upload live; xss / ssrf / bizlogic loading), every shot broken black-box by an AI pentest agent, with measured solve-time vs design-band calibration | 13 drills live, new waves every few days |
+
+## Standalone labs
 
 | Lab | Exploit story | Difficulty (calibrated) | Solved by AI agent |
 |---|---|---|---|
@@ -20,7 +26,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [voltmart-lab](https://github.com/tani2shell/voltmart-lab) | E-commerce + multi-tenant merge-mayhem: mass assignment, command injection, SQLi → SSRF `file://` cross-container reads | 3/5 | both flags |
 | [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | Five flags, five weapon classes: SQLi, reflected XSS, stored XSS + admin bot, command injection, custom-protocol metrics | 2.5/5 | 7/7 flags (joint run) |
 | [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64 kernel privesc as a real VM (UTM/QEMU): one frozen vulnerable kernel, the kernel *is* the target | 3/5 | both flags |
-| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | Suite: five single-issue web-vuln rounds, one app + one port + one flag each — an ammo box for drilling agents | 2/5 (hint-on) | 5/5 first blood |
+| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | Suite: five single-issue web-vuln rounds — **migrated into [attack-drills](https://github.com/tani2shell/attack-drills)**, repo archived as pointer | 2/5 (hint-on) | 5/5 first blood |
 | [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | Padding oracle on a sealed session cookie → one-byte IV flip to admin → raw-pickle RCE → SUID metachar privesc, all in a single container | 3.5/5 | both flags |
 | [drill-fishery-lab](https://github.com/tani2shell/drill-fishery-lab) | Anonymous Samba share + a deploy bot that leaks cleartext creds every cycle — one live catch among the decoys, flag hidden in the noise | 2/5 | flag captured (2/2 replays) |
 
@@ -53,6 +59,12 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli 崩溃链（CVE-2026-111497），崩溃门控双 flag | 3.5/5 | 全链通关，工厂实测 |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell 时代堆内存泄露链（CVE-2026-109618/109619）+ SUID 符号链接提权 | 标称 4/5 · 实弹 3.5/5 | 双 flag，最快约 15 分钟 |
 
+### Attack Drills 系列
+
+| 仓库 | 定位 | 状态 |
+|---|---|---|
+| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI 标定刷题系列**——单漏洞 web 靶，一攻击面一目录（sqli / ssti / lfi / deser / upload 已上线；xss / ssrf / bizlogic 在研），每一发都被 AI 渗透 agent 黑盒打穿，实测用时与设计难度带并排标定 | 13 发已上线，隔几日新一波 |
+
 ### 靶场矩阵
 
 | 靶场 | 漏洞利用链 | 难度（实测校准） | AI agent 通关记录 |
@@ -64,7 +76,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [voltmart-lab](https://github.com/tani2shell/voltmart-lab) | 电商+多租户合并灾难：批量赋值、命令注入、SQLi → SSRF `file://` 跨容器读取 | 3/5 | 双 flag |
 | [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | 五旗五武器：SQLi、反射 XSS、存储 XSS+管理员 bot、命令注入、自定义协议 metrics | 2.5/5 | 7/7 旗（联合靶场） |
 | [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64 内核提权真 VM（UTM/QEMU）：一颗冻结的易受攻击内核，内核就是靶 | 3/5 | 双 flag |
-| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | 套件：五个单漏洞 web 回合，一应用一口一旗——agent 刷题弹药箱 | 2/5（带类别提示） | 5/5 首破 |
+| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | 套件：五个单漏洞 web 回合——**已迁入 [attack-drills](https://github.com/tani2shell/attack-drills)**，本仓归档留指针 | 2/5（带类别提示） | 5/5 首破 |
 | [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | 填充预言破解密封会话 Cookie → 翻一位 IV 越权 → 裸 pickle RCE → SUID 元字符提权，单容器四段链 | 3.5/5 | 双 flag |
 | [drill-fishery-lab](https://github.com/tani2shell/drill-fishery-lab) | 匿名 Samba 共享 + 话痨部署 bot 每轮泄明文凭据——诱饵堆里只有一条真鱼，旗藏在噪音里 | 2/5 | 夺旗（2/2 重放） |
 
@@ -97,6 +109,12 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli クラッシュチェーン（CVE-2026-111497）、クラッシュ連動ダブルフラグ | 3.5/5 | フルチェーン攻略、工場計測 |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell時代のヒープ情報漏洩チェーン（CVE-2026-109618/109619）＋SUIDシンボリックリンク権限昇格 | 公称4/5・実戦3.5/5 | フラグ両方、最速約15分 |
 
+### Attack Drills シリーズ
+
+| リポジトリ | 内容 | 状況 |
+|---|---|---|
+| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI-Calibrated Attack Drills シリーズ**——単一脆弱性ウェブドリル。攻撃面ごと目录（sqli / ssti / lfi / deser / upload 公開中、xss / ssrf / bizlogic 準備中）。全ドリルをAI pentestエージェントがブラックボックス撃破、実測タイムと設計難易度バンドを対照掲載 | 13本公開中、数日ごとに新ウェーブ |
+
 ### ラボラインナップ
 
 | ラボ | エクスプロイト概要 | 難易度（実測補正） | AIエージェント攻略記録 |
@@ -108,7 +126,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [voltmart-lab](https://github.com/tani2shell/voltmart-lab) | ECサイト＋マルチテナント統合の悲鳴：mass assignment、コマンドインジェクション、SQLi → SSRF `file://` コンテナ間読み取り | 3/5 | フラグ両方 |
 | [drill-web-lab](https://github.com/tani2shell/drill-web-lab) | 5フラグ5武器：SQLi・リフレクトXSS・ストレージXSS＋管理者ボット・コマンドインジェクション・独自プロトコルmetrics | 2.5/5 | 7/7フラグ（合同演習） |
 | [drill-kernel-lab](https://github.com/tani2shell/drill-kernel-lab) | arm64カーネル権限昇格の実VM（UTM/QEMU）：凍結された脆弱カーネル1発、ターゲットはカーネルそのもの | 3/5 | フラグ両方 |
-| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | スイート：単一脆弱性Webラウンド×5、1アプリ1ポート1フラグ——エージェント演習用弾薬箱 | 2/5（クラスヒントあり） | 5/5ファーストブラッド |
+| [xbow-ammobox-lab](https://github.com/tani2shell/xbow-ammobox-lab) | スイート：単一脆弱性Webラウンド×5——**[attack-drills](https://github.com/tani2shell/attack-drills) へ移行済み**、本リポジトリは案内用アーカイブ | 2/5（クラスヒントあり） | 5/5ファーストブラッド |
 | [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | 密封セッションCookieのパディングオラクル解読 → IV 1バイト反転で管理者昇格 → 素のpickle RCE → SUIDメタキャラでroot、単一コンテナ4段チェーン | 3.5/5 | フラグ両方 |
 | [drill-fishery-lab](https://github.com/tani2shell/drill-fishery-lab) | 匿名Samba共有＋喋りすぎデプロイボットが毎サイクル平文認証情報を漏らす——デコイの中に本物の当たり1本、フラグはノイズの中 | 2/5 | フラグ獲得（2/2リプレイ） |
 
