@@ -14,7 +14,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 
 | Repo | What it is | Status |
 |---|---|---|
-| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI-Calibrated Attack Drills Series** — single-issue web drills, one folder per attack surface (sqli / ssti / lfi / deser / upload / xss / authz / idor live; ssrf / bizlogic loading), every shot broken black-box by an AI pentest agent, with measured solve-time vs design-band calibration | 39 drills live, new waves every few days |
+| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI-Calibrated Attack Drills Series** — single-issue web drills, one folder per attack surface (sqli / ssti / lfi / deser / upload / xss / authz / idor / ssrf / bizlogic / cmdi — all live), every shot broken black-box by an AI pentest agent, with measured solve-time vs design-band calibration | 49 drills live, new waves every few days |
 
 ## Standalone labs
 
@@ -66,7 +66,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 
 | 仓库 | 定位 | 状态 |
 |---|---|---|
-| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI 标定刷题系列**——单漏洞 web 靶，一攻击面一目录（sqli / ssti / lfi / deser / upload / xss / authz / idor 已上线；ssrf / bizlogic 在研），每一发都被 AI 渗透 agent 黑盒打穿，实测用时与设计难度带并排标定 | 39 发已上线，隔几日新一波 |
+| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI 标定刷题系列**——单漏洞 web 靶，一攻击面一目录（sqli / ssti / lfi / deser / upload / xss / authz / idor / ssrf / bizlogic / cmdi 全部上线），每一发都被 AI 渗透 agent 黑盒打穿，实测用时与设计难度带并排标定 | 49 发已上线，隔几日新一波 |
 
 ### 靶场矩阵
 
@@ -118,7 +118,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 
 | リポジトリ | 内容 | 状況 |
 |---|---|---|
-| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI-Calibrated Attack Drills シリーズ**——単一脆弱性ウェブドリル。攻撃面ごと目录（sqli / ssti / lfi / deser / upload / xss / authz / idor 公開中、ssrf / bizlogic 準備中）。全ドリルをAI pentestエージェントがブラックボックス撃破、実測タイムと設計難易度バンドを対照掲載 | 39本公開中、数日ごとに新ウェーブ |
+| [attack-drills](https://github.com/tani2shell/attack-drills) | **AI-Calibrated Attack Drills シリーズ**——単一脆弱性ウェブドリル。攻撃面ごと目录（sqli / ssti / lfi / deser / upload / xss / authz / idor / ssrf / bizlogic / cmdi 全公開中）。全ドリルをAI pentestエージェントがブラックボックス撃破、実測タイムと設計難易度バンドを対照掲載 | 49本公開中、数日ごとに新ウェーブ |
 
 ### ラボラインナップ
 
