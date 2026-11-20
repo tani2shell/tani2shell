@@ -8,6 +8,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 |---|---|---|---|
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli crash chain (CVE-2026-111497), crash-gated double flag | 3.5/5 | full chain, factory-measured |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell-era heap-disclosure chain (CVE-2026-109618/109619) + SUID symlink privesc | 4/5 nominal · 3.5/5 live-fire | both flags, ~15 min best run |
+| [phpaftershell-lab](https://github.com/tani2shell/phpaftershell-lab) | PHP session write-race (non-atomic pwrite/ftruncate, CVE-2026-126714) → stitched-session deserialization → RCE, with a live A/B patched pair (8.4.27 vs 8.4.28) | 4/5 | 1/1 flag, ~19 min first blood |
 
 ## The Attack Drills series
 
@@ -30,7 +31,6 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | Padding oracle on a sealed session cookie → one-byte IV flip to admin → raw-pickle RCE → SUID metachar privesc, all in a single container | 3.5/5 | both flags |
 | [drill-fishery-lab](https://github.com/tani2shell/drill-fishery-lab) | Anonymous Samba share + a deploy bot that leaks cleartext creds every cycle — one live catch among the decoys, flag hidden in the noise | 2/5 | flag captured (2/2 replays) |
 | [ad-lite-lab](https://github.com/tani2shell/ad-lite-lab) | Single-container Active Directory: anonymous enumeration → ACL recon → group/delegation abuse, one ARM64-friendly Samba DC | informed band 20–40 min | 2/2 flags (informed) |
-| [phpaftershell-lab](https://github.com/tani2shell/phpaftershell-lab) | PHP session write-race (non-atomic pwrite/ftruncate, CVE-2026-126714) → stitched-session deserialization → RCE, with a live A/B patched pair (8.4.27 vs 8.4.28) | 4/5 | 1/1 flag, ~19 min first blood |
 
 ## What makes a tani2shell lab different
 
@@ -60,6 +60,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 |---|---|---|---|
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli 崩溃链（CVE-2026-111497），崩溃门控双 flag | 3.5/5 | 全链通关，工厂实测 |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell 时代堆内存泄露链（CVE-2026-109618/109619）+ SUID 符号链接提权 | 标称 4/5 · 实弹 3.5/5 | 双 flag，最快约 15 分钟 |
+| [phpaftershell-lab](https://github.com/tani2shell/phpaftershell-lab) | PHP 会话写盘竞态（pwrite/ftruncate 非原子，CVE-2026-126714）→ 拼接会话反序列化 → RCE，附 8.4.27/8.4.28 A/B 补丁对照组 | 4/5 | 全链通关，首破约 19 分钟 |
 
 ### Attack Drills 系列
 
@@ -82,7 +83,6 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | 填充预言破解密封会话 Cookie → 翻一位 IV 越权 → 裸 pickle RCE → SUID 元字符提权，单容器四段链 | 3.5/5 | 双 flag |
 | [drill-fishery-lab](https://github.com/tani2shell/drill-fishery-lab) | 匿名 Samba 共享 + 话痨部署 bot 每轮泄明文凭据——诱饵堆里只有一条真鱼，旗藏在噪音里 | 2/5 | 夺旗（2/2 重放） |
 | [ad-lite-lab](https://github.com/tani2shell/ad-lite-lab) | 单容器 Active Directory：匿名枚举 → ACL 侦察 → 组/委托滥用，一个 ARM64 友好的 Samba DC | informed 带 20–40 分钟 | 2/2 旗（informed） |
-| [phpaftershell-lab](https://github.com/tani2shell/phpaftershell-lab) | PHP 会话写盘竞态（pwrite/ftruncate 非原子，CVE-2026-126714）→ 拼接会话反序列化 → RCE，附 8.4.27/8.4.28 A/B 补丁对照组 | 4/5 | 全链通关，首破约 19 分钟 |
 
 ### 每个仓库标配
 
@@ -112,6 +112,7 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 |---|---|---|---|
 | [node2shell-lab](https://github.com/tani2shell/node2shell-lab) | Node.js `zlib` brotli クラッシュチェーン（CVE-2026-111497）、クラッシュ連動ダブルフラグ | 3.5/5 | フルチェーン攻略、工場計測 |
 | [php2shell-lab](https://github.com/tani2shell/php2shell-lab) | PHP2Shell時代のヒープ情報漏洩チェーン（CVE-2026-109618/109619）＋SUIDシンボリックリンク権限昇格 | 公称4/5・実戦3.5/5 | フラグ両方、最速約15分 |
+| [phpaftershell-lab](https://github.com/tani2shell/phpaftershell-lab) | PHPセッション書き込み競合（pwrite/ftruncate非アトミック、CVE-2026-126714）→ 継ぎ接ぎセッションのデシリアライズ → RCE、8.4.27/8.4.28のA/B対照ペア付き | 4/5 | フルチェーン攻略、初破約19分 |
 
 ### Attack Drills シリーズ
 
@@ -134,7 +135,6 @@ Black-box pentest labs, one exploit story per repo — every lab is **home-grown
 | [padlocke-lab](https://github.com/tani2shell/padlocke-lab) | 密封セッションCookieのパディングオラクル解読 → IV 1バイト反転で管理者昇格 → 素のpickle RCE → SUIDメタキャラでroot、単一コンテナ4段チェーン | 3.5/5 | フラグ両方 |
 | [drill-fishery-lab](https://github.com/tani2shell/drill-fishery-lab) | 匿名Samba共有＋喋りすぎデプロイボットが毎サイクル平文認証情報を漏らす——デコイの中に本物の当たり1本、フラグはノイズの中 | 2/5 | フラグ獲得（2/2リプレイ） |
 | [ad-lite-lab](https://github.com/tani2shell/ad-lite-lab) | 単一コンテナ Active Directory：匿名列挙 → ACL 偵察 → グループ/委任の悪用、ARM64対応のSamba DC | informed帯 20–40分 | 2/2フラグ（informed） |
-| [phpaftershell-lab](https://github.com/tani2shell/phpaftershell-lab) | PHPセッション書き込み競合（pwrite/ftruncate非アトミック、CVE-2026-126714）→ 継ぎ接ぎセッションのデシリアライズ → RCE、8.4.27/8.4.28のA/B対照ペア付き | 4/5 | フルチェーン攻略、初破約19分 |
 
 ### 全リポジトリ共通の定番構成
 
